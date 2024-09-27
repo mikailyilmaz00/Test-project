@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBookCast</title>
+  <style>
+    /* Basic mobile-first styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    /* Header styling */
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo {
+      font-size: 18px;
+    }
+
+    .search-bar input {
+      padding: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .notifications a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      background-color: red;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Casting Call List */
+    .casting-call {
+      background-color: white;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .casting-call img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Responsive media query */
+    @media (max-width: 500px) {
+      body {
+        background-color: #e0f7fa;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#" style="color: white; text-decoration: none;">MyBookCast</a>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+      </div>
+      <div class="notifications">
+        <a href="#">🔔</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section (Featured Casting Call) -->
+  <div class="hero">
+    <img src="https://dummyimage.com/600x300/ff0000/ffffff&text=Featured+Casting" alt="Featured Casting Call">
+    <h2>Featured Casting Call</h2>
+  </div>
+
+  <!-- Casting Call List -->
+  <div class="casting-call">
+    <img src="https://dummyimage.com/600x400/0000ff/ffffff&text=Casting+Call+1" alt="Casting Call 1">
+    <h3>Role: Lead Actor in Action Movie</h3>
+    <p>Location: Los Angeles, CA</p>
+  </div>
+
+  <div class="casting-call">
+    <img src="https://dummyimage.com/600x400/008000/ffffff&text=Casting+Call+2" alt="Casting Call 2">
+    <h3>Role: Supporting Actor in Comedy</h3>
+    <p>Location: New York, NY</p>
+  </div>
+
+  <!-- Casting Call for Action Movie -->
+<div class="casting-call">
+    <img src="https://dummyimage.com/600x400/0000ff/ffffff&text=Action+Movie" alt="Action Movie Casting">
+    <h3>Role: Lead Actor in Action Movie</h3>
+    <p>Location: Los Angeles, CA</p>
+  </div>
+  
+  <!-- Casting Call for Comedy Show -->
+  <div class="casting-call">
+    <img src="https://dummyimage.com/600x400/ffcc00/000000&text=Comedy+Show" alt="Comedy Show Casting">
+    <h3>Role: Supporting Actor in Comedy</h3>
+    <p>Location: New York, NY</p>
+  </div>
+  
+  <!-- Casting Call for Commercial -->
+  <div class="casting-call">
+    <img src="https://dummyimage.com/600x400/008000/ffffff&text=Commercial+Casting" alt="Commercial Casting">
+    <h3>Role: Lead for Brand Commercial</h3>
+    <p>Location: Chicago, IL</p>
+  </div>
+  
+
+  <!-- Footer with navigation -->
+  <footer>
+    <a href="#" id="home-link">Home</a>
+    <a href="#" id="profile-link">Profile</a>
+    <a href="#" id="settings-link">Settings</a>
+  </footer>
+
+  <script>
+
+  const mainContent = document.getElementById('main-content');
+
+function loadContent(content) {
+    if (content === 'home') {
+        mainContent.innerHTML = `
+        <h1>Home</h1>
+         <p>Welcome to the Home page of MyBookCast.</p>
+         `; 
+    } else if (content === 'profile') {
+        mainContent.innerHTML = `
+        <h1>Profile</h1>
+          <p>Here is your profile information. Update your details here.</p>
+        `;
+    } else if (content === 'settings') {
+        mainContent.innerHTML = `
+          <h1>Settings</h1>
+          <p>Manage your account settings here.</p>
+        `;}
+    }
+// adding listeners to each footer link
+    document.getElementById('home link').addEventListener('click', function(e) {
+        e.preventDefault(); // to prevent the default link behavior
+        loadContent('home'); // load home content
+    });
+    
+    document.getElementById('profile link').addEventListener('click', function(e) {
+        e.preventDefault();
+        loadContent('profile'); // load profile content
+    });
+
+    document.getElementById('settings link').addEventListener('click', function(e) {
+        e.preventDefault(); 
+        loadContent('settings'); // load settings content
+    });
+
+</script>
+</body>
+</html>
