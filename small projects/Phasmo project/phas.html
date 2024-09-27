@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="phas.css">
+    <title>Phas</title>
+</head>
+<body>
+
+    <!-- Sidebar for navigation -->
+    <div class="sidebar">
+        <h2>Phasmophobia</h2>
+        <a href="types.html">Types of Ghosts</a>
+        <a href="equipment.html">Equipment</a>
+        <a href="evidence.html">Evidence</a>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-content">
+        <h1>This is a page about a horror game named Phasmophobia</h1>
+
+        <h2>Important info about the ghosts</h2>
+        <p>The ghosts are very different. Not all ghosts are the same. Just bear that in mind.</p>
+
+        <h3>What kinds of ghost can you face?</h3>
+        <p> Examples down below</p>
+        <ul id="ghostList">
+            <li>Shade</li>
+            <li>Jinn</li>
+            <li>Spirit</li>
+            <li>Wraith</li>
+            <li>etc.</li>
+        </ul>
+    <button id="toggleGhosts">Toggle Ghost List </button>
+
+        <!-- Image with caption -->
+        <img src="https://steamuserimages-a.akamaihd.net/ugc/2012597977351707205/240D77C9DCEE59126C9644ED939CD965AC663AEF/?imw=512&imh=288&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=truejpg" alt="A certain ghost">
+        <p style="text-align: left;">This is what a demon looks like.</p>
+        <p> If you want to know more about types of ghost, equipment and evidence to expose the ghosts, click down below.</p>
+        <!-- Buttons section -->
+        <button onclick="window.location.href='types.html';">Learn About Ghosts</button>
+        <button onclick="window.location.href='equipment.html';">Check Equipment</button>
+        <button onclick="window.location.href='Evidence.html';">See evidence</button>
+
+        <!-- Table for navigation links -->
+        <table>
+            <thead>
+                <tr>
+                    <th><b>Navigation</b></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="types.html">Types of ghosts</a></td>
+                </tr>
+                <tr>
+                    <td><a href="equipment.html">Equipment</a></td>
+                </tr>
+                <tr>
+                    <td><a href="evidence.html">Evidence</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+      
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>EMF Reader</td>
+                    <td>Detects electromagnetic field levels</td>
+                </tr>
+                <tr>
+                    <td>Spirit Box</td>
+                    <td>Communicates with the ghost through radio frequencies</td>
+                </tr>
+                <tr>
+                    <td>Thermometer</td>
+                    <td>Detects freezing temperatures</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+<script>
+
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelectorAll('.sidebar a').forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
+// Toggle visibility of the ghost list
+document.getElementById('toggleGhosts').addEventListener('click', function() {
+    const ghostList = document.getElementById('ghostList');
+    if (ghostList.style.display === "none") {
+        ghostList.style.display = "block";
+    } else {
+        ghostList.style.display = "none";
+    }
+});
+
+
+</script>
+
+
+</body>
+</html>
