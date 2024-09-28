@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function doTheThing(){
+			theName = document.getElementById("userName").value;
+			number = document.getElementById("aNumber").value;
+			number = parseInt(number); // just to be sure it's a number
+			number = 2024 - number;
+			alert( theName + " and " + number);
+		}
+	</script>
+</head>
+<body>
+	<form>
+		Type your name: <input type="text" id="userName"><br>
+		Type year of birth: <input type="number" id="aNumber"><br>
+		<br>
+		<input type="button" onclick="doTheThing();" value="DO IT!">
+	</form>
+</body>
+</html>

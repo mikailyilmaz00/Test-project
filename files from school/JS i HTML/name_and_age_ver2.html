@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Name and age - ver2</title>
+	<style>
+		#placeToOutput {
+			margin: 5px;
+			padding: 20px;
+			width: 300px;
+			height: 200px;
+			background: blue;
+			color: white;
+		}
+	</style>
+
+	<script>
+		function doTheThing(){
+			theName = document.getElementById("userName").value;
+			number = document.getElementById("aNumber").value;
+			number = parseInt(number);
+			number = 2024 - number;
+
+			//alert( theName + " and " + number);
+			document.getElementById("placeToOutput").innerHTML = 
+							theName + " is now " + number;
+
+
+			// change the image if TOO OLD! :/
+			if (number<=50){
+				document.getElementById("aNiceCake").src = "images/cake1.jpg";
+			} 
+			if (number>50){
+				document.getElementById("aNiceCake").src = "images/cake2.jpg";
+			} 
+
+		}
+	</script>
+</head>
+<body>
+	<form>
+		Type your name: <input type="text" id="userName"><br>
+		Type a number: <input type="number" id="aNumber"><br>
+		<br>
+		<input type="button" onclick="doTheThing();" value="DO IT!">
+	</form>
+
+	<div id="placeToOutput"></div>
+	
+	<img id="aNiceCake" src="images/cake1.jpg" style="width: 150px;">
+</body>
+</html>

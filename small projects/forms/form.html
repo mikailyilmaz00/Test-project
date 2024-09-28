@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="form_style.css">
+</head>
+<body>
+
+	<form action="mailto:aval@sdu.dk?subject=Super COOL data!"
+		method="post" enctype="text/plain">
+
+		<div class="mypanel">
+			<label for="textbox">Text Box</label><br>
+			<input type="text" name="mytext"><br>
+			
+			<br>
+			
+			<label for="password">Password Input</label><br>
+			<input type="password" name="thepassword"><br>
+		</div>
+
+		<br>
+		
+		<label for="textbox">Text Area</label><br>
+		<textarea name="alargetex"></textarea><br>
+		
+		<br>
+		
+		<label for="dropdown">Dropdown</label><br>
+
+		<select id="dropdown">
+			<option value="1">Option 1</option>
+			<option value="2">Option 2</option>
+			<option value="3">Option 3 - very cool</option>
+		</select><br>
+		
+		<br>
+		
+		<label for="checkbox">Checkbox</label><br>
+		Are you happy? <input type="checkbox" name="valueA">
+		Are you tall?<input type="checkbox" name="valueB">
+	    Are you hungry?<input type="checkbox" name="valueC">	
+	    <br>
+
+		<br>
+		<label for="radio">Radio Select</label><br>
+		Live on Mars? <input type="radio" name="abc">
+		Live on Moon? <input type="radio" name="abc">
+		Live underground? <input type="radio" name="abc"><br>
+
+		<br>
+		How happy are you about X ? 
+		<input type="range" name="points" min="1" max="5" value="3"> 
+		<br>
+
+		<br>		
+		<label for="file">File</label><br>
+		<input type="file" name="file"><br>
+
+		<br>		
+		<input type="button" value="press here to do something">
+		<br><br>
+		<input type="submit" value="Send the data to Andrea">
+	</form>
+
+</body>
+</html>	

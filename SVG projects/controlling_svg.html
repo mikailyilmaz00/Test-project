@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Controlling SVG shapes</title>
+
+  <style>
+  	svg {
+			border: 1px solid #aaa;
+    }
+
+  	.controls{
+  		width: 500px;
+  		text-align: center;
+  	}
+
+  	button {
+  		margin: 5px;
+  		width: 100px;
+  		height: 50px;
+  	}
+  </style>
+</head>
+
+<body>
+
+<h1>Controlling SVG shapes</h1>
+<h2>Use the buttons below to control the red circle</h2>
+
+	<svg width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+
+		<circle cx="250" cy="100" r="70" stroke="black" fill="cyan" /> 
+		<circle id="theBall" cx="0" cy="0" r="40" stroke="black" fill="red" />
+		<circle cx="150" cy="200" r="30" stroke="black" fill="green" /> 
+	</svg> 
+</div>
+
+<div class="controls">
+	<div>
+		<button type="button" id="left_btn">left</button>
+		<button type="button" id="up_btn">up</button>
+		<button type="button" id="right_btn">right</button>
+	</div>
+	<div>
+		<button id="down_btn">down</button>
+	</div>
+</div>
+ 
+
+<script>
+// attach onclick events to each button
+// 	clicking will move the shape around
+
+
+// initial position of the red circle
+let centerX = 130;
+let centerY = 120;
+
+document.getElementById('theBall').setAttribute("cx", centerX);
+document.getElementById('theBall').setAttribute("cy", centerY);
+
+document.getElementById('left_btn').onclick = function(){
+	centerX = centerX - 5;
+	// change position
+  document.getElementById('theBall').setAttribute("cx", centerX);
+}
+
+document.getElementById('right_btn').onclick = function(){
+	centerX = centerX + 5;
+  document.getElementById('theBall').setAttribute("cx", centerX);
+}
+
+document.getElementById('up_btn').onclick = function(){
+	centerY = centerY - 5;
+  document.getElementById('theBall').setAttribute("cy", centerY);
+}
+
+document.getElementById('down_btn').onclick = function(){
+	centerY = centerY + 5;
+  document.getElementById('theBall').setAttribute("cy", centerY);
+}
+
+</script>
+
+</body>
+
+</html>
